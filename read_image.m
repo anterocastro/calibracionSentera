@@ -42,11 +42,7 @@ b=m(2);
  nx=mean(mean(II_nir(687:1203,1388:2198,3)));
  II_red=imread('arbol_RGB.jpg');
  rx=mean(mean(II_red(585:945,1418:2108,1)));
-% analizamos NDVI de teflon
-%   II_nir=imread('teflon_NIR.jpg');
-%  nx=mean(mean(II_nir(1597:1621,1939:2044,3)));
-%  II_red=imread('teflon_RGB.jpg');
-%  rx=mean(mean(II_red(1467:1483,1953:2077,1)));
+
  
 NDVI = a*(nx/(nx+rx))  -  b*(rx/(nx+rx));
 
@@ -60,3 +56,31 @@ imshow(II_nir)
 subplot(1,2,2)
 imshow(II_red)
 
+
+
+
+
+
+% 
+% figure(1)
+% subplot(2,3,1)
+% imshow(p_tela_gris_NIR)
+% subplot(2,3,2)
+% imshow(p_tela_negra_NIR)
+% subplot(2,3,3)
+% imshow(p_tela_roja_NIR)
+% subplot(2,3,4)
+% imshow(p_tela_gris_R)
+% subplot(2,3,5)
+% imshow(p_tela_negra_R)
+% subplot(2,3,6)
+% imshow(p_tela_roja_R)
+
+
+% 
+% %generamos una imagen NDVI de 
+% NDVI_matrix=a*(II_nir(:,:,3)./(II_nir(:,:,3)+II_red(:,:,1))) -b*(II_red(:,:,1)./(II_nir(:,:,3)+II_red(:,:,1)));
+% figure(2)
+% imshow(NDVI_matrix)
+% colormap('jet')
+% colorbar
